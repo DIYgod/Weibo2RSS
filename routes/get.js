@@ -5,17 +5,17 @@ var redis = require('../tools/redis');
 
 function getTime (html) {
     var math;
-    var date = new Date();
     if (math = /(\d+)分钟前/.exec(html)) {
-        date.setMinutes(date.getMinutes() - math[1]);
+        var date = new Date();
+        date.setMinutes(new Date().getMinutes() - math[1]);
         return date.toUTCString();
     }
     else if (math = /今天 (\d+):(\d+)/.exec(html)) {
-        var date = new Date(date.getFullYear(), date.getMonth(), date.getDate(), math[1], math[2]);
+        var date = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), math[1], math[2]);
         return date.toUTCString();
     }
     else if (math = /(\d+)月(\d+)日 (\d+):(\d+)/.exec(html)) {
-        var date = new Date(date.getFullYear(), math[1] - 1, parseInt(math[2]), math[3], math[4]);
+        var date = new Date(new Date().getFullYear(), math[1] - 1, parseInt(math[2]), math[3], math[4]);
         return date.toUTCString();
     }
     return html;
