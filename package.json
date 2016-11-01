@@ -1,0 +1,28 @@
+{
+  "name": "Weibo2RSS",
+  "version": "0.0.1",
+  "description": "使用RSS订阅喜欢的微博博主",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DIYgod/Weibo2RSS.git"
+  },
+  "keywords": [
+    "Weibo",
+    "RSS"
+  ],
+  "author": "DIYgod",
+  "license": "SATA",
+  "bugs": {
+    "url": "https://github.com/DIYgod/Weibo2RSS/issues"
+  },
+  "homepage": "https://github.com/DIYgod/Weibo2RSS#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "express": "^4.14.0",
+    "log4js": "^0.6.38",
+    "node-fetch": "^1.6.3",
+    "redis": "^2.6.3"
+  }
+}
