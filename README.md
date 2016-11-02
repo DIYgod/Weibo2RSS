@@ -24,3 +24,7 @@ RSS 格式输出一个微博博主最新的 15 条微博，使用 RSS 阅读器�
 需要环境：Node.js, Redis
 
 推荐使用 Docker
+
+## LICENSE
+
+MIT © [DIYgod](http://github.com/DIYgod)
