@@ -1,21 +1,22 @@
 var fetch = require('node-fetch');
 var cheerio = require('cheerio');
+var url = require('url');
 var logger = require('../tools/logger');
 var redis = require('../tools/redis');
 
 function getTime (html) {
     var math;
+    var date = new Date();
     if (math = /(\d+)分钟前/.exec(html)) {
-        var date = new Date();
-        date.setMinutes(new Date().getMinutes() - math[1]);
+        date.setMinutes(date.getMinutes() - math[1]);
         return date.toUTCString();
     }
     else if (math = /今天 (\d+):(\d+)/.exec(html)) {
-        var date = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), math[1], math[2]);
+        date = new Date(date.getFullYear(), date.getMonth(), date.getDate(), math[1], math[2]);
         return date.toUTCString();
     }
     else if (math = /(\d+)月(\d+)日 (\d+):(\d+)/.exec(html)) {
-        var date = new Date(new Date().getFullYear(), math[1] - 1, parseInt(math[2]), math[3], math[4]);
+        date = new Date(date.getFullYear(), math[1] - 1, parseInt(math[2]), math[3], math[4]);
         return date.toUTCString();
     }
     return html;
@@ -29,10 +30,13 @@ module.exports = function (req, res) {
         req.socket.remoteAddress ||
         req.connection.socket.remoteAddress;
 
+    var query = url.parse(req.url,true).query;
+    var debug = query.debug;
+
     var uid = req.params.uid;
 
     redis.client.get(`Weibo2RSS${uid}`, function(err, reply) {
-        if (reply) {
+        if (reply && !debug) {
             logger.info(`Weibo2RSS uid ${uid} form redis, IP: ${ip}`);
             res.send(reply);
         }
