@@ -8,6 +8,10 @@ Demo：https://api.prprpr.me/weibo/rss/3306934123
 
 RSS 格式输出一个微博博主最新的 15 条微博，可以使用 RSS 阅读器来获取及时推送，配合 [IFTTT](https://ifttt.com/) 还可以实现更多好玩的功能。
 
+Demo：https://api.prprpr.me/weibo/negative/3306934123
+
+使用 [Text2Emotion](https://github.com/DIYgod/Text2Emotion) 实现，仅输出消极情绪的微博，用来监控博主的消极情绪。
+
 ## 使用
 
 使用 RSS 阅读器订阅：https://api.prprpr.me/weibo/rss/{微博博主的uid}
