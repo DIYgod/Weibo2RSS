@@ -2,6 +2,10 @@
 
 > 使用RSS订阅喜欢的微博博主
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/ucdjQF7wcNNiWY9mCEpAeGLz/DIYgod/Weibo2RSS'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/ucdjQF7wcNNiWY9mCEpAeGLz/DIYgod/Weibo2RSS.svg' />
+</a>
+
 ## 介绍
 
 Demo：https://api.prprpr.me/weibo/rss/3306934123
