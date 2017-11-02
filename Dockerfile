@@ -1,5 +1,5 @@
-FROM node:4.4-onbuild
-EXPOSE 1207
+FROM node:6.11.5-onbuild
+EXPOSE 1206
 RUN npm install -g forever
 RUN echo "Asia/Shanghai" > /etc/timezone
 RUN dpkg-reconfigure -f noninteractive tzdata
