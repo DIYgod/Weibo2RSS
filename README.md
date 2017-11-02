@@ -30,6 +30,10 @@ Demo：https://api.prprpr.me/weibo/negative/3306934123
 需要环境：Node.js
 
 推荐使用 Docker
+```
+docker build .
+docker run --name Weibo2RSS -p 1206:1206 -d [CONTAINER ID]
+```
 
 ## LICENSE
 
