@@ -1,3 +1,5 @@
+# ⚠️ 此项目已被弃用并合入 [RSSHub](https://github.com/DIYgod/RSSHub)，请使用 [RSSHub](https://github.com/DIYgod/RSSHub)
+
 # Weibo2RSS
 
 > 使用RSS订阅喜欢的微博博主
